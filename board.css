@@ -1,0 +1,34 @@
+:root {
+  --bg: #eef2f6;
+  --ink: #1c2430;
+  --muted: #5b6778;
+  --paper: #fff;
+  --line: #d5dde6;
+  --accent: #1f4e79;
+  --wip: #b45309;
+  --done: #0f766e;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; font-family: "Segoe UI", "Noto Sans", sans-serif; background: var(--bg); color: var(--ink); }
+.top {
+  display: flex; justify-content: space-between; gap: 1rem; align-items: flex-end;
+  padding: 1.25rem 1.5rem 0.5rem; border-bottom: 3px solid var(--accent); background: var(--paper);
+}
+h1 { margin: 0; font-size: 1.45rem; letter-spacing: -0.02em; }
+.kicker { margin: 0 0 0.2rem; color: var(--accent); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
+.meta { display: flex; gap: 0.75rem; color: var(--muted); font-size: 0.85rem; }
+.meta span { background: var(--bg); padding: 0.35rem 0.6rem; border-radius: 999px; }
+.note { margin: 0.75rem 1.5rem; color: var(--muted); font-size: 0.9rem; }
+.board { display: grid; grid-template-columns: repeat(5, minmax(220px, 1fr)); gap: 0.85rem; padding: 0 1.5rem 2rem; overflow-x: auto; }
+.col { background: #f7f9fb; border: 1px solid var(--line); border-radius: 12px; min-height: 70vh; padding: 0.7rem; }
+.col h2 { margin: 0 0 0.7rem; font-size: 0.95rem; display: flex; justify-content: space-between; }
+.limit { font-size: 0.75rem; color: var(--wip); font-weight: 700; }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 0.7rem 0.75rem; margin-bottom: 0.6rem; box-shadow: 0 1px 0 rgba(28,36,48,0.04); }
+.card h3 { margin: 0 0 0.35rem; font-size: 0.92rem; }
+.card p { margin: 0; font-size: 0.8rem; color: var(--muted); line-height: 1.35; }
+.tags { margin-top: 0.45rem; display: flex; gap: 0.3rem; flex-wrap: wrap; }
+.tag { font-size: 0.68rem; padding: 0.12rem 0.4rem; border-radius: 999px; background: #e8eef5; color: var(--accent); }
+.over { outline: 2px solid #b91c1c; }
+footer { padding: 0 1.5rem 1.5rem; color: var(--muted); font-size: 0.85rem; }
+a { color: var(--accent); }
+@media (max-width: 900px) { .board { grid-template-columns: repeat(5, 260px); } }
